@@ -1,0 +1,13 @@
+<h1>Available inventories</h1>
+
+[% toto %]
+[% FOREACH section = sectionList %]
+  <h2>by [% section.title %]<h2/>
+  <ul>
+  [% FOREACH entry = section.entries %]
+    <li><a href="/show/[% section.mongoKey %]/[% entry %]">[% entry %]</a></li>
+  [% END %]
+  </ul>
+[% END %]
+
+<br />

@@ -1,0 +1,42 @@
+<a href="/"><small>Index</small></a>
+<h1>Computer <strong>[% inventory.hardware.name %]</strong></h1>
+
+Memory: [% inventory.hardware.memory %]MB<br />
+
+<h2>CPU</h2>
+<ul>
+[% FOREACH cpu = inventory.cpus %]
+  <li>Number of core: [% cpu.core %]</li>
+  <li>Speed (Mhz): [% cpu.speed %]</li>
+[% END %]
+</ul>
+
+<h2>Hardware</h2>
+<ul>
+  <li>Chassis: [% inventory.hardware.chassis_type %]</li>
+  <li>Manufacturer: [% inventory.bios.smanufacturer %]</li>
+  <li>Model: [% inventory.bios.smodel %]</li>
+  <li>Serial Number: [% inventory.bios.ssn %]</li>
+</ul>
+
+<h2>Controllers</h2>
+<ul>
+[% FOREACH controller = inventory.controllers %]
+  <li>[% controller.name %]</li>
+[% END %]
+</ul>
+
+<h2>Controllers</h2>
+<ul>
+[% FOREACH controller = inventory.controllers %]
+  <li>[% controller.name %]</li>
+[% END %]
+</ul>
+
+<h2>Softwares</h2>
+<ul>
+[% FOREACH software = inventory.softwares %]
+  <li>[% software.name %] ([% software.version %])</li>
+[% END %]
+</ul>
+

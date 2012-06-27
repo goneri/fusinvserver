@@ -1,0 +1,13 @@
+<h1>Computer</h1>
+
+[% toto %]
+[% IF hostnames %]
+<h2>Hostname:</h2>
+[% FOREACH hostname = hostnames %]
+   <a href="/show/?hostname=[% hostname %]">[% hostname %]<a/>
+[% END %] 
+[% END %] 
+
+[% FOREACH item = items %]
+   * Item: [% item %]
+[% END %]
